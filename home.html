@@ -1,0 +1,65 @@
+<!-- /templates/home.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Управление инстансов</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Управление инстансов</h1>
+        <div class="form-container">
+            <form action="/add_instance" method="POST">
+            <div class="form-container2">
+                <div class="cssss">
+                    <label for="ip">IP: </label><br>
+                    <input type="text" name="ip" id="ip" required><br>
+                </div>
+                <div class="cssss">
+                    <label for="port">Port: </label><br>
+                    <input type="text" name="port" id="port" required><br>
+                </div>
+                <button type="submit">Добавление инстанса</button>
+            </div>
+            </form>
+        </div>
+
+        <div class="form-container">
+            <form action="/remove_instance" method="POST">
+                <label for="index">Удаление по index-у: </label><br>
+                <input type="text" name="index" id="index" required><br>
+                <button type="submit">Удалить инстанс</button>
+            </form>
+        </div>
+
+        <!-- Таблица инстансов -->
+        <h2>Таблица инстансов</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Index</th>
+                    <th>IP</th>
+                    <th>Port</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for instance in instances %}
+                <tr>
+                    <td>{{ loop.index0 }}</td> 
+                    <td>{{ instance.ip | replace('http://', '') }}</td>
+                    <td>{{ instance.port }}</td>
+                    <td>{{ instance.status }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <div class="image-container">
+        <img src="{{ url_for('static', filename='1993391_flying-cat-battle-cats-transparent-png.png') }}" alt="Flying Cat" style="width: 100%; max-width: 600px; display: block; margin: 20px auto;">
+    </div>
+</body>
+</html>

@@ -1,0 +1,116 @@
+/* static/style.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2d1f5d;
+    color: #f8f4f8;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+h1 {
+    color: #ffffff;
+    margin-top: 20px;
+}
+
+h2 {
+    color: #d3b3ff;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #7a5cdb;
+    text-align: center;
+}
+
+th {
+    background-color: #7a5cdb;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #6a4dca;
+}
+
+tr:nth-child(odd) {
+    background-color: #5b42b3;
+}
+
+tr:hover {
+    background-color: #7a5cdb;
+}
+
+input[type="text"] {
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #7a5cdb;
+    border-radius: 5px;
+    width: 300px;
+    font-size: 14px;
+}
+
+button {
+    background-color: #6a4dca;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #7a5cdb;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+.container {
+    margin-top: 30px;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+}
+.form-container2 {
+    display: block;
+}
+.cssss {
+    display:inline-block;
+}
+
+/* Таблица инстансов */
+table {
+    width: 70%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #3498db;
+    color: white;
+}
+
+
+tr:hover {
+    background-color: #937ed6;
+}
